@@ -20,6 +20,7 @@ defmodule BasicLiveviewWeb.Router do
     get "/", PageController, :home
 
     live "/clock/boring", Clock.Boring
+    live "/clock/updating", Clock.Updating
   end
 
   # Other scopes may use custom stacks.

@@ -10,8 +10,9 @@ defmodule BasicLiveview.Application do
     children = [
       # Start the Telemetry supervisor
       BasicLiveviewWeb.Telemetry,
-      # Start the Ecto repository
-      BasicLiveview.Repo,
+      ## Start the Ecto repository
+      # To use the database, comment in this line below. You'll need to create the database, etc.
+      # BasicLiveview.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: BasicLiveview.PubSub},
       # Start Finch

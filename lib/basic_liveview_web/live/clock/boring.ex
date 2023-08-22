@@ -1,4 +1,5 @@
 defmodule BasicLiveviewWeb.Clock.Boring do
+  # This is the line that sets up everything you need for this to act as a live view.
   use BasicLiveviewWeb, :live_view
 
   # Docs: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html

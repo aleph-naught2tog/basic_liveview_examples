@@ -17,7 +17,8 @@
         </dl>
 
         <div class="button-wrapper">
-          <%!-- The value of 'phx-click' needs to exactly match the first argument of `handle_event` --%>
+          <%!-- The value of 'phx-click' needs to exactly match the first
+          argument of `handle_event` --%>
           <button phx-click="add-cat">Add cat</button>
           <button phx-click="remove-cat" disabled={@zoo_map[:cats] === 0}>
             Give cat vacation

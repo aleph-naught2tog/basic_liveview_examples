@@ -19,7 +19,8 @@ defmodule BasicLiveviewWeb.Zoo.NotifyingZoo do
       </dl>
 
       <div class="button-wrapper">
-        <%!-- phx-target={@myself} is how the event gets sent to _this_ component, instead of the parent LiveView --%>
+        <%!-- phx-target={@myself} is how the event gets sent to _this_
+        component, instead of the parent LiveView --%>
         <button phx-click="add-animal" phx-target={@myself}>
           Add <%= @name %>
         </button>
@@ -42,7 +43,8 @@ defmodule BasicLiveviewWeb.Zoo.NotifyingZoo do
 
     # This notifies the live view of our updated count This is just like when we
     # were doing Process.send for the clock -- we're in the same process, so
-    # we're sending a message to the process. This will be handled by `handle_info` in the LiveView.
+    # we're sending a message to the process. This will be handled by
+    # `handle_info` in the LiveView.
     send(recipient, {sender, :count, message})
 
     {:noreply, socket |> assign(:count, updated_count)}

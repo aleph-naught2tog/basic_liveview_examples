@@ -11,8 +11,9 @@ defmodule BasicLiveviewWeb.Zoo.DownwardFlow do
      |> assign(:total_animal_count, initial_count)}
   end
 
-  # This first argument must match a `phx-<event_name>` somewhere to fire
-  # Here, we don't actually care about any params -- `add-cat` tells us everything we need to know.
+  # This first argument must match a `phx-<event_name>` somewhere to fire. Here,
+  # we don't actually care about any params -- `add-cat` tells us everything we
+  # need to know.
   def handle_event("add-cat", _params, socket) do
     current_zoo_map = socket.assigns.zoo_map
 
@@ -75,5 +76,6 @@ defmodule BasicLiveviewWeb.Zoo.DownwardFlow do
     |> Enum.sum()
   end
 
-  # No render function here! -- you can put it in a file as long as the file name is the same as this one, with an extension of `.html.heex`
+  # No render function here! -- you can put it in a file as long as the file
+  # name is the same as this one, with an extension of `.html.heex`
 end

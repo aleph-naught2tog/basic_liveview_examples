@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* This file is for your main application CSS */
 .zoo h1 {
   @apply text-2xl font-black mb-4;
@@ -11,14 +15,31 @@
   @apply text-xl font-bold mb-2;
 }
 
+.zoo .animal-wrapper {
+  @apply flex flex-col w-1/2 justify-evenly gap-10 mt-8;
+}
+
 .zoo .animal-list {
-  @apply flex flex-row gap-4;
+  @apply flex flex-row gap-4 items-center mb-2;
 }
 
 .zoo .animal-list dt {
-  @apply capitalize font-semibold mt-2;
+  @apply capitalize font-semibold;
 }
 
 .zoo .animal-list dd {
   @apply text-center;
 }
+
+.zoo .button-wrapper {
+  @apply flex flex-col gap-2;
+}
+
+.zoo button {
+  @apply py-2 px-3 bg-blue-600 text-white rounded-md font-medium;
+}
+
+.zoo button:disabled {
+  opacity: 0.5;
+}
+

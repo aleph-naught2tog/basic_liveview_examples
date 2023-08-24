@@ -4,15 +4,43 @@
   <article>
     <h2>Animals</h2>
 
-    <p>Our current animals are:</p>
+    <p>Total animal count: <%= @total_animal_count %></p>
 
-    <dl class="animal-list">
-      <%= for {animal_name, count} <- @zoo_map do %>
-        <div>
-          <dt><%= animal_name %></dt>
-          <dd><%= count %></dd>
+    <div class="animal-wrapper">
+      <div>
+        <dl class="animal-list">
+          <dt>
+            <span role="img" aria-label="cat">🐈</span>
+            Cats
+          </dt>
+          <dd><%= @zoo_map[:cats] %></dd>
+        </dl>
+
+        <div class="button-wrapper">
+          <%!-- The value of 'phx-click' needs to exactly match the first argument of `handle_event` --%>
+          <button phx-click="add-cat">Add cat</button>
+          <button phx-click="remove-cat" disabled={@zoo_map[:cats] === 0}>
+            Give cat vacation
+          </button>
         </div>
-      <% end %>
-    </dl>
+      </div>
+
+      <div>
+        <dl class="animal-list">
+          <dt>
+            <span role="img" aria-label="dog">🐕</span>
+            Dogs
+          </dt>
+          <dd><%= @zoo_map[:dogs] %></dd>
+        </dl>
+
+        <div class="button-wrapper">
+          <button phx-click="add-dog">Add dog</button>
+          <button phx-click="remove-dog" disabled={@zoo_map[:dogs] === 0}>
+            Give dog vacation
+          </button>
+        </div>
+      </div>
+    </div>
   </article>
 </section>

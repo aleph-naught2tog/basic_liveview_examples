@@ -25,22 +25,12 @@
         </div>
       </div>
 
-      <div>
-        <dl class="animal-list">
-          <dt>
-            <span role="img" aria-label="dog">🐕</span>
-            Dogs
-          </dt>
-          <dd><%= @zoo_map[:dogs] %></dd>
-        </dl>
-
-        <div class="button-wrapper">
-          <button phx-click="add-dog">Add dog</button>
-          <button phx-click="remove-dog" disabled={@zoo_map[:dogs] === 0}>
-            Give dog vacation
-          </button>
-        </div>
-      </div>
+      <BasicLiveviewWeb.Zoo.animal_count
+        count={@zoo_map[:dogs]}
+        name="dog"
+        add_event="add-dog"
+        remove_event="remove-dog"
+      />
     </div>
   </article>
 </section>

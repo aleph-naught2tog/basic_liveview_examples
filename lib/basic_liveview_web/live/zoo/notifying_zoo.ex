@@ -10,23 +10,25 @@ defmodule BasicLiveviewWeb.Zoo.NotifyingZoo do
       |> assign_new(:count, fn -> assigns[:count] end)
 
     ~H"""
-    <div>
-      <dl class="animal-list">
-        <dt>
-          <span role="img" aria-label={@name}>🐈</span> <%= @name <> "s" %>
-        </dt>
-        <dd><%= @count %></dd>
-      </dl>
+    <div class="animal-wrapper">
+      <div>
+        <dl class="animal-list">
+          <dt>
+            <span role="img" aria-label={@name}>🐈</span> <%= @name <> "s" %>
+          </dt>
+          <dd><%= @count %></dd>
+        </dl>
 
-      <div class="button-wrapper">
-        <%!-- phx-target={@myself} is how the event gets sent to _this_
+        <div class="button-wrapper">
+          <%!-- phx-target={@myself} is how the event gets sent to _this_
         component, instead of the parent LiveView --%>
-        <button phx-click="add-animal" phx-target={@myself}>
-          Add <%= @name %>
-        </button>
-        <button phx-click="remove-animal" disabled={@count === 0} phx-target={@myself}>
-          Give <%= @name %> vacation
-        </button>
+          <button phx-click="add-animal" phx-target={@myself}>
+            Add <%= @name %>
+          </button>
+          <button phx-click="remove-animal" disabled={@count === 0} phx-target={@myself}>
+            Give <%= @name %> vacation
+          </button>
+        </div>
       </div>
     </div>
     """

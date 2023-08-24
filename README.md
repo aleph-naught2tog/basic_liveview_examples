@@ -1,5 +1,9 @@
 # BasicLiveview
 
+This is a set of small LiveView examples. Right now, there are two main modules: `Clock` and `Zoo`. Both have a few variations, going from least complex to more complex to show some ideas and progressions. You can find the links on the home page.
+
+## Getting started
+
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies

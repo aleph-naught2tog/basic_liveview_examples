@@ -1,12 +1,29 @@
 <div class="p-20">
-  <h1 class="text-2xl font-black">Routes</h1>
+  <h1>Routes</h1>
 
-  <ul>
-    <li><.link href={"/clock/boring"}>Clock.Boring</.link></li>
-    <li><.link href={"/clock/updating"}>Clock.Updating</.link></li>
-    <li><.link href={"/clock/with-phoenix-component"}>Clock.UpdatingWithPhoenixComponent</.link></li>
-    <li><.link href={"/zoo/downward-flow"}>Zoo.DownwardFlow</.link></li>
-    <li><.link href={"/zoo/notify-flow"}>Zoo.NotifyFlow</.link></li>
-  </ul>
+  <div>
+    <h2>Clock examples</h2>
+    <p>
+      This starts off with a boring, static clock that never changes time and works up to a rendering-on-the-millisecond Phoenix.Component example.
+    </p>
 
+    <ol>
+      <li><.link href="/clock/boring">Clock.Boring</.link></li>
+      <li><.link href="/clock/updating">Clock.Updating</.link></li>
+      <li>
+        <.link href="/clock/with-phoenix-component">Clock.UpdatingWithPhoenixComponent</.link>
+      </li>
+    </ol>
+  </div>
+
+  <div class="mt-10">
+    <h2>Zoo examples</h2>
+    <p>
+      This has two examples for a very small data-flow example. (Imagine it's a form.) The first example, "DownwardFlow", shows a more typical React-style pattern, whereas the latter shows a pattern involving a LiveComponent.
+    </p>
+    <ol>
+      <li><.link href="/zoo/downward-flow">Zoo.DownwardFlow</.link></li>
+      <li><.link href="/zoo/notify-flow">Zoo.NotifyFlow</.link></li>
+    </ol>
+  </div>
 </div>

@@ -12,14 +12,20 @@ a {
 
 ul {
   list-style: disc;
+  margin-top: 1rem;
+}
+
+ol {
+  list-style: decimal;
+  margin-top: 0.75rem;
 }
 
 /* This file is for your main application CSS */
-.zoo h1 {
+h1 {
   @apply text-2xl font-black mb-4;
 }
 
-.zoo h2 {
+h2 {
   @apply text-xl font-bold mb-2;
 }
 

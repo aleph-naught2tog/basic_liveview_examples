@@ -3,3 +3,22 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+.zoo h1 {
+  @apply text-2xl font-black mb-4;
+}
+
+.zoo h2 {
+  @apply text-xl font-bold mb-2;
+}
+
+.zoo .animal-list {
+  @apply flex flex-row gap-4;
+}
+
+.zoo .animal-list dt {
+  @apply capitalize font-semibold mt-2;
+}
+
+.zoo .animal-list dd {
+  @apply text-center;
+}

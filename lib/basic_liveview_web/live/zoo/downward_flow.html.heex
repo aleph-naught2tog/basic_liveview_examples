@@ -1,0 +1,18 @@
+<section class="zoo">
+  <h1>Welcome to the zoo!</h1>
+
+  <article>
+    <h2>Animals</h2>
+
+    <p>Our current animals are:</p>
+
+    <dl class="animal-list">
+      <%= for {animal_name, count} <- @zoo_map do %>
+        <div>
+          <dt><%= animal_name %></dt>
+          <dd><%= count %></dd>
+        </div>
+      <% end %>
+    </dl>
+  </article>
+</section>

@@ -25,6 +25,10 @@
         </div>
       </div>
 
+      <%!-- This is very reminiscent of React -- we have a top-level thing that
+      has some top-level state, we send down some pieces of state and some event
+      handlers, those cause changes in the parent, which changes the top-level
+      state, so we we send down new state ... --%>
       <BasicLiveviewWeb.Zoo.animal_count
         count={@zoo_map[:dogs]}
         name="dog"

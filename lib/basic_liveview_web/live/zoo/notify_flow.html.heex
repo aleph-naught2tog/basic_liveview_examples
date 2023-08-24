@@ -1,0 +1,24 @@
+<section class="zoo">
+  <h1>Welcome to the zoo!</h1>
+
+  <article>
+    <h2>Animals</h2>
+
+    <p>Total animal count: <%= @total_animal_count %></p>
+
+    <.live_component
+      id="notifying-zoo-notify-flow-id-cat"
+      module={BasicLiveviewWeb.Zoo.NotifyingZoo}
+      count={@zoo_map[:cats]}
+      name="cat"
+    />
+
+    <.live_component
+      id="notifying-zoo-notify-flow-id-dog"
+      module={BasicLiveviewWeb.Zoo.NotifyingZoo}
+      count={@zoo_map[:dogs]}
+      name="dog"
+    />
+
+  </article>
+</section>

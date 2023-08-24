@@ -22,7 +22,9 @@ defmodule BasicLiveviewWeb.Router do
     live "/clock/boring", Clock.Boring
     live "/clock/updating", Clock.Updating
     live "/clock/with-phoenix-component", Clock.UpdatingWithPhoenixComponent
+
     live "/zoo/downward-flow", Zoo.DownwardFlow
+    live "/zoo/notify-flow", Zoo.NotifyFlow
   end
 
   # Other scopes may use custom stacks.

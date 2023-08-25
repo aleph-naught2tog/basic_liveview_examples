@@ -11,7 +11,7 @@ defmodule BasicLiveviewWeb.Clock do
 
   slot(:header, required: true, doc: "The text to precede the time displayed")
 
-  # This is a "special" slot -- if you're familiar with React, this is the equivalent of children. It's whatever you put inside the
+  # This is a "special" slot -- if you're familiar with React, this is the equivalent of children. It's whatever you put inside the component itself. You don't need to wrap anything in a tag, it's just what's there.
   slot(:inner_block)
 
   def clock(assigns) do

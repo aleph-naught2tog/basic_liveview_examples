@@ -18,7 +18,8 @@ defmodule BasicLiveviewWeb.Zoo.DownwardFlow do
     current_zoo_map = socket.assigns.zoo_map
 
     updated_zoo_map =
-      Map.update!(current_zoo_map, :cats, fn current_cat_count -> current_cat_count + 1 end)
+      Map.update!(current_zoo_map, :cats,
+        fn current_cat_count -> current_cat_count + 1 end)
 
     updated_total = calculate_animal_total(updated_zoo_map)
 
@@ -32,7 +33,8 @@ defmodule BasicLiveviewWeb.Zoo.DownwardFlow do
     current_zoo_map = socket.assigns.zoo_map
 
     updated_zoo_map =
-      Map.update!(current_zoo_map, :dogs, fn current_cat_count -> current_cat_count + 1 end)
+      Map.update!(current_zoo_map, :dogs,
+        fn current_cat_count -> current_cat_count + 1 end)
 
     updated_total = calculate_animal_total(updated_zoo_map)
 
@@ -46,7 +48,8 @@ defmodule BasicLiveviewWeb.Zoo.DownwardFlow do
     current_zoo_map = socket.assigns.zoo_map
 
     updated_zoo_map =
-      Map.update!(current_zoo_map, :dogs, fn current_cat_count -> current_cat_count - 1 end)
+      Map.update!(current_zoo_map, :dogs,
+        fn current_cat_count -> current_cat_count - 1 end)
 
     updated_total = calculate_animal_total(updated_zoo_map)
 
@@ -60,7 +63,8 @@ defmodule BasicLiveviewWeb.Zoo.DownwardFlow do
     current_zoo_map = socket.assigns.zoo_map
 
     updated_zoo_map =
-      Map.update!(current_zoo_map, :cats, fn current_cat_count -> current_cat_count - 1 end)
+      Map.update!(current_zoo_map, :cats,
+        fn current_cat_count -> current_cat_count - 1 end)
 
     updated_total = calculate_animal_total(updated_zoo_map)
 

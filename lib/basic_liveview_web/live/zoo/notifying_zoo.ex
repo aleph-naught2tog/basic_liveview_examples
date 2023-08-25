@@ -21,7 +21,7 @@ defmodule BasicLiveviewWeb.Zoo.NotifyingZoo do
 
         <div class="button-wrapper">
           <%!-- phx-target={@myself} is how the event gets sent to _this_
-        component, instead of the parent LiveView --%>
+          component, instead of the parent LiveView --%>
           <button phx-click="add-animal" phx-target={@myself}>
             Add <%= @name %>
           </button>
